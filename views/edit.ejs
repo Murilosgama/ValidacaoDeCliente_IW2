@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form action="/edit/<%= client.id %>" method="POST">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name" value="<%= client.name %>" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="<%= client.email %>" required><br>
+        <label for="phone">Telefone:</label><br>
+        <input type="text" id="phone" name="phone" value="<%= client.phone %>" required><br>
+        <label for="address">Endereço:</label><br>
+        <textarea id="address" name="address"><%= client.address %></textarea><br>
+        <button type="submit">Editar Cliente</button>
+    </form>
+    <a href="/">Voltar para a Lista de Clientes</a>
+</body>
+</html>
